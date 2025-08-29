@@ -2,8 +2,8 @@ name: CI/CD for React app
 
 on:
   push: 
-    branches: [main]
-  workflow_dispatch:
+    branches: 
+      - main
 
 
 permissions: 
@@ -29,7 +29,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to Github Pages
-        uses: JamesIves/github-pages-deploy-actions@4.7.3
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          banch: gh-pages
-          folder: build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
