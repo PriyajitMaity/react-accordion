@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://PriyajitMaity.github.io/react-accordion",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
